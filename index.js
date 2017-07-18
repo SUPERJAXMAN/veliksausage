@@ -1,7 +1,7 @@
 module.exports = function FastVelik(dispatch) {
     
     let cid, 
-	enabled = false // true = Enabled by default
+		enabled = false // true = Enabled by default
 
     dispatch.hook('S_LOGIN', 2, (event) => {cid = event.cid});
 	
@@ -33,8 +33,8 @@ module.exports = function FastVelik(dispatch) {
 	
     dispatch.hook('S_LOAD_TOPO', 1, (event) => {      
         if(enabled) {
-	   (event.zone === 9781);
-	}
+			(event.zone === 9781);
+		}
     });
 	
     dispatch.hook('S_SPAWN_ME', 1, (event) => {
@@ -42,7 +42,7 @@ module.exports = function FastVelik(dispatch) {
             event.x = 39379;
             event.y = -113115;
             event.z = 17213;
-	    event.w = 8211;
+			event.w = 8211;
             return true;
         }
     })
